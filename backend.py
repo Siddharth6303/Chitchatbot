@@ -30,7 +30,7 @@ def chat(request: ChatRequest):
                 {"role": "user", "content": request.message}
             ]
         )
-        answer = response.choices[0].message['content'].strip()
+        answer = response.choices[0].message.content.strip()
         return {"response": answer}
     except Exception as e:
         return {"response": f"Oops, something went wrong: {str(e)}"}
