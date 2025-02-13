@@ -1,2 +1,8 @@
 streamlit
 requests
+openai
+fastapi
+uvicorn
+tokenizers
+transformers
+python-dotenv
