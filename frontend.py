@@ -6,7 +6,7 @@ import random
 from datetime import datetime
 
 # Romantic Theme
-st.set_page_config(page_title="❤️ Chat with Your Sid Happy Valentines Day", page_icon="💌", layout="centered")
+st.set_page_config(page_title="❤️ Chat with Your Sid, Happy Valentine's Day", page_icon="💌", layout="centered")
 st.title("💖 Chat with Sid")
 st.write("*Hey Suruu, I’m always here for you, no matter the distance. 💕*")
 
