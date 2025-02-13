@@ -1,4 +1,4 @@
-# Valentine's Day Special: Romantic Chatbot for Siddharth's Girlfriend
+# Valentine's Day Special: Romantic Chatbot for Shruti from Siddharth
 # Save this file as frontend.py
 import streamlit as st
 import requests
@@ -6,9 +6,9 @@ import random
 from datetime import datetime
 
 # Romantic Theme
-st.set_page_config(page_title="❤️ Chat with Your Love", page_icon="💌", layout="centered")
-st.title("💖 Your Personal Valentine Chatbot")
-st.write("*A little piece of me, always here for you.* 💕")
+st.set_page_config(page_title="❤️ Chat with Your Sid", page_icon="💌", layout="centered")
+st.title("💖 Chat with Suruu")
+st.write("*Hey Suruu, I’m always here for you, no matter the distance. 💕*")
 
 # Background Styling
 st.markdown(
@@ -31,18 +31,18 @@ for message in st.session_state['messages']:
     with st.chat_message(message['role']):
         st.markdown(message['content'])
 
-# Romantic greetings based on time
+# Personalized greetings for Suruu
 hour = datetime.now().hour
 if hour < 12:
-    greeting = "Good morning, my sunshine ☀️"
+    greeting = "Good morning, my sunshine Suruu ☀️"
 elif hour < 18:
-    greeting = "Good afternoon, my love 💖"
-else: 
-    greeting = "Good evening, my starry sky 🌙"
+    greeting = "Good afternoon, my sweetest Suruu 💖"
+else:
+    greeting = "Good evening, my starry Suruu 🌙"
 st.markdown(f"**{greeting}**")
 
 # Input and Backend Call
-user_input = st.chat_input("What’s on your mind, sweetheart? 💬")
+user_input = st.chat_input("What's on your mind, Suruu? 💬")
 BACKEND_URL = "https://your-backend-url/chat"  # Update after deployment
 
 if user_input:
@@ -52,9 +52,9 @@ if user_input:
 
     try:
         response = requests.post(BACKEND_URL, json={"message": user_input})
-        bot_response = response.json().get("response", "I'm always here for you, darling! 💖")
+        bot_response = response.json().get("response", "Suruu, you are always on my mind! 💖")
     except Exception:
-        bot_response = "I can't reach my heart (backend) right now, but I love you! ❤️"
+        bot_response = "Can't reach my heart (backend) right now, but I love you, Suruu! ❤️"
     
     st.session_state['messages'].append({"role": "assistant", "content": bot_response})
     with st.chat_message("assistant"):
@@ -62,4 +62,4 @@ if user_input:
 
 # Add a footer
 st.markdown("---")
-st.markdown("*Made with ❤️ by Siddharth for his beloved.*")
+st.markdown("*Made with ❤️ by Siddharth for his beloved Suruu (Shruti).*")
