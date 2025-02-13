@@ -7,7 +7,7 @@ from datetime import datetime
 
 # Romantic Theme
 st.set_page_config(page_title="❤️ Chat with Your Sid", page_icon="💌", layout="centered")
-st.title("💖 Chat with Suruu")
+st.title("💖 Chat with Sid")
 st.write("*Hey Suruu, I’m always here for you, no matter the distance. 💕*")
 
 # Background Styling
@@ -43,7 +43,7 @@ st.markdown(f"**{greeting}**")
 
 # Input and Backend Call
 user_input = st.chat_input("What's on your mind, Suruu? 💬")
-BACKEND_URL = "https://your-backend-url/chat"  # Update after deployment
+BACKEND_URL = "https://chitchatbot-pm4j.onrender.com/chat"  # Update after deployment
 
 if user_input:
     st.session_state['messages'].append({"role": "user", "content": user_input})
